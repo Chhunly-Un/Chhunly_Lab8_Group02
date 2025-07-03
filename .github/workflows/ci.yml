@@ -17,12 +17,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '18'  # ✅ Use Node.js 18 to support Express 5.1.0
+        node-version: '18'
 
     - name: Install dependencies
-      run: |
-        npm install  # ✅ Prefer npm here since you're using package-lock.json
+      run: npm ci
 
     - name: Run tests
-      run: |
-        npm test
+      run: npm test
